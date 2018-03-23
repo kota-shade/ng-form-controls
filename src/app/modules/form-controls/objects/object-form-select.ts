@@ -10,12 +10,12 @@ export class ValuePair {
 export class ObjectFormSelect extends BaseObject {
   private _options = Array<ValuePair>();
 
-  public constructor(data: object = {}) {
+  constructor(data: object = {}) {
     super(data);
     this.initOptions(data);
   }
 
-  public setData(data: object = {}): void {
+  setData(data: object = {}): void {
     super.setData(data);
     this.options.splice(0);
     this.initOptions(data);
@@ -27,7 +27,7 @@ export class ObjectFormSelect extends BaseObject {
         const value = data['_options'][i]['value'] || data['_options'][i]['_value'] || '';
         const label = data['_options'][i]['label'] || data['_options'][i]['_label'] || '';
         const vp = new ValuePair(value, label);
-        this.options.push(vp);
+        this._options.push(vp);
       }
     }
   }

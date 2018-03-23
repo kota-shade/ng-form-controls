@@ -1,3 +1,10 @@
-<p>
-  text works!
-</p>
+<input type="text"
+       [formControl]="formElement"
+       [class]="realMode() === 'view'? 'form-control-plaintext'+elementClass : 'form-control'+elementClass"
+       [readonly]="realMode() === 'view'"
+       id="{{id}}"
+>
+<!--[formControl]="formElement"-->
+<!--id="{{id}}"-->
+<!--[class]="realMode() === 'view'? 'form-control-plaintext'+elementClass : 'form-control'+elementClass"-->
+<!--[readonly]="realMode() === 'view'"-->

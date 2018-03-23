@@ -6,10 +6,14 @@ export class BaseObject {
   private _default: any;
 
   constructor(data: object = {}) {
-    this.setData(data);
+    this._setData(data);
   }
 
   setData(data: object = {}): void {
+    this._setData(data);
+  }
+
+  private _setData(data: object) {
     this.key = data['_key'] || '';
     this.value = data['_value'] || '';
     this.default = data['_default'] || '';

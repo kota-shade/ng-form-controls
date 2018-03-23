@@ -1,3 +1,7 @@
-<p>
-  textarea works!
-</p>
+<textarea type="text"
+          class="{{elementClass}}"
+          id="{{id}}"
+          [class]="realMode() === 'view'? 'form-control-plaintext' : 'form-control'"
+          [readonly]="realMode() === 'view'"
+          [formControl]="formElement"
+></textarea>

@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 import { TextComponent } from './components/text/text.component';
 import { SelectComponent } from './components/select/select.component';
 import { RadioComponent } from './components/radio/radio.component';
@@ -9,7 +12,9 @@ import { CheckboxComponent } from './components/checkbox/checkbox.component';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   declarations: [
     TextComponent,
