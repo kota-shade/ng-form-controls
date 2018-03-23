@@ -1,5 +1,5 @@
 {
-  "name": "form-controls",
+  "name": "ngx-form-controls",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -47,5 +47,15 @@
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
     "typescript": "~2.5.3"
-  }
+  },
+  "author": {
+    "name": "Andrey Kotrekhov",
+    "email": "kota.shade@gmail.com"
+  },
+  "description": "Angular additional FormControl-s and components for them",
+  "homepage": "https://github.com/valor-software/ng2-file-upload#readme",
+  "keywords": [
+    "angular",
+    "ngx-form-controls"
+  ]
 }
