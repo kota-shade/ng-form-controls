@@ -11,6 +11,21 @@ import { CheckboxComponent } from './components/checkbox/checkbox.component';
   imports: [
     CommonModule
   ],
-  declarations: [TextComponent, SelectComponent, RadioComponent, TextareaComponent, MultiCheckboxComponent, CheckboxComponent]
+  declarations: [
+    TextComponent,
+    SelectComponent,
+    RadioComponent,
+    TextareaComponent,
+    MultiCheckboxComponent,
+    CheckboxComponent,
+  ],
+  exports: [
+    TextComponent,
+    SelectComponent,
+    RadioComponent,
+    TextareaComponent,
+    MultiCheckboxComponent,
+    CheckboxComponent,
+  ]
 })
 export class FormControlsModule { }
