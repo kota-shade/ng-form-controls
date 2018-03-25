@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {FormControlText} from '../../controls/form-control-text';
 
 @Component({
-  selector: 'form-control-textarea',
+  selector: 'ngx-form-control-textarea',
   templateUrl: './textarea.component.html',
   styleUrls: ['./textarea.component.css']
 })

@@ -12,6 +12,6 @@
     "lib": {
       "entryFile": "public_api.ts"
     },
-    "dest": "../../ngx-tabs-lib"
+    "dest": "../../ngx-form-controls"
   }
 }

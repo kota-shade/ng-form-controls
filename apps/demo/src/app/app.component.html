@@ -1,6 +1,14 @@
-NgxFormControl example application
-
-<ngx-form-control-text [formElement]="form.get('text')"></ngx-form-control-text>
+<h1>NgxFormControl example application</h1>
+<form
+  [formGroup]="form" (ngSubmit)="onSubmit()" >
+  <ngx-form-control-text [formElement]="form.get('text')"></ngx-form-control-text>
+  <ngx-form-control-select [formElement]="form.get('select')"></ngx-form-control-select>
+  <ngx-form-control-multi-checkbox [formElement]="form.get('multiCheckbox')"></ngx-form-control-multi-checkbox>
+  <ngx-form-control-radio [formElement]="form.get('radio')"></ngx-form-control-radio>
+  <ngx-form-control-checkbox [formElement]="form.get('checkbox')" [label]="'Чекбокс'"></ngx-form-control-checkbox>
+  <ngx-form-control-textarea [formElement]="form.get('textarea')"></ngx-form-control-textarea>
+  <input type="submit" name="OK">
+</form>
 
 <ngx-tabs>
 
