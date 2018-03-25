@@ -1,15 +1,10 @@
 import {AbstractControl, FormArray, FormControl, FormGroup} from '@angular/forms';
-import { ObjectDataInterface } from '../objects/object-data-interface';
 
 import {FormControlInterface} from '../controls/form-control-interface';
 
 /**
  * пробегает по переданным данным и рекурсивно заполняет объект полученными данными
  * и структуру контрольных элементов.
- *
- * @param {AbstractControl} control
- * @param {} dataObj
- * @param data
  */
 export class FillData {
   private static DISABLED_MODE = 'view';
@@ -42,8 +37,6 @@ export class FillData {
 
   /**
    * Заполняет данными массив элементов формы FormArray
-   * @param {FormArray} control
-   * @param data
    */
   public static setFormArrayData(control: FormArray, data) {
     FillData.setControlMode(control, data);
@@ -73,8 +66,6 @@ export class FillData {
 
   /**
    * заполняет данными FormControl объект
-   * @param {FormControl} control
-   * @param data
    */
   public static setFormControlData(control: FormControl, data): void {
     FillData.setControlMode(control, data);
@@ -98,8 +89,6 @@ export class FillData {
 
   /**
    * выставляе DISABLE|ENABLE элемента, если выставлена mode в данных
-   * @param {AbstractControl} control
-   * @param data
    */
   public static setControlMode(control: AbstractControl, data) {
     if (data['_mode'] !== undefined) { // NB!!! мода указана явно - меняем disable у элемента
