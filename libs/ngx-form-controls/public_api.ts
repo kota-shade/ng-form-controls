@@ -12,3 +12,8 @@ export { FormControlCheckbox as NgxFormControlCheckbox } from './src/controls/fo
 export { FormControlSelect as NgxFormControlSelect } from './src/controls/form-control-select';
 export { FormControlMultiSelect as NgxFormControlMultiSelect } from './src/controls/form-control-multi-select';
 
+export { BaseObject as NpxBaseObject } from './src/objects/base-object';
+export { ValuePair as NpxValuePair } from './src/objects/object-form-select';
+export { ObjectFormSelect as NpxObjectFormSelect } from './src/objects/object-form-select';
+export { ValuePairMultiSelect as NpxValuePairMultiSelect } from './src/objects/object-form-multi-select';
+export { ObjectFormMultiSelect as NpxObjectFormMultiSelect } from './src/objects/object-form-multi-select';
