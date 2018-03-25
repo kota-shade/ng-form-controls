@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { FormControlText } from '../../controls/form-control-text';
+import { FormControlText as NgxFormControlText } from '../../controls/form-control-text';
 import { BaseObject } from '../../objects/base-object';
 
 @Component({
@@ -10,7 +10,7 @@ import { BaseObject } from '../../objects/base-object';
 })
 export class TextComponent implements OnInit {
   @Input() mode: string|null = null;
-  @Input() formElement = new FormControlText('', {});
+  @Input() formElement = new NgxFormControlText('', {});
   @Input() elementClass = '';
   @Input() id = '';
 

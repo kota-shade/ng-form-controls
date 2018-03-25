@@ -4,7 +4,7 @@ import { FormControlSelect } from '../../controls/form-control-select';
 import { ObjectFormSelect } from '../../objects/object-form-select';
 
 @Component({
-  selector: 'form-control-select',
+  selector: 'ngx-form-control-select',
   templateUrl: './select.component.html',
   styleUrls: ['./select.component.css']
 })

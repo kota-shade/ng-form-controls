@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import {FormControlCheckbox} from '../../controls/form-control-checkbox';
 
 @Component({
-  selector: 'form-control-checkbox',
+  selector: 'ngx-form-control-checkbox',
   templateUrl: './checkbox.component.html',
   styleUrls: ['./checkbox.component.css']
 })

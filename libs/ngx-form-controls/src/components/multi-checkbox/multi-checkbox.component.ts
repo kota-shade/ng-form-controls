@@ -3,7 +3,7 @@ import { FormControl } from '@angular/forms';
 import { FormControlMultiSelect } from '../../controls/form-control-multi-select';
 
 @Component({
-  selector: 'form-control-multi-checkbox',
+  selector: 'ngx-form-control-multi-checkbox',
   templateUrl: './multi-checkbox.component.html',
   styleUrls: ['./multi-checkbox.component.css']
 })

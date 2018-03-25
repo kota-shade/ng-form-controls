@@ -2,7 +2,7 @@ import { Component, Input, OnInit} from '@angular/core';
 import { FormControlSelect } from '../../controls/form-control-select';
 
 @Component({
-  selector: 'form-control-radio',
+  selector: 'ngx-form-control-radio',
   templateUrl: './radio.component.html',
   styleUrls: ['./radio.component.css']
 })
