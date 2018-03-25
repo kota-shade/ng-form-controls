@@ -3,7 +3,6 @@ import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { NgxTabsLibModule } from 'ngx-tabs-lib';
 import { NgxFormControlsModule } from 'ngx-form-controls';
 
 @NgModule({
@@ -11,7 +10,6 @@ import { NgxFormControlsModule } from 'ngx-form-controls';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxTabsLibModule,
     NgxFormControlsModule
   ],
   declarations: [AppComponent],

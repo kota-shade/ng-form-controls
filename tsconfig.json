@@ -17,8 +17,7 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "ngx-form-controls": ["libs/ngx-form-controls"],
-      "ngx-tabs-lib": ["libs/ngx-tabs-lib"]
+      "ngx-form-controls": ["libs/ngx-form-controls"]
     }
   }
 }

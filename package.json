@@ -10,8 +10,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "packagr": "ng-packagr -p ng-package.json",
-    "build:lib": "ng-packagr -p libs/ngx-form-controls/package.json",
-    "build:lib1": "ng-packagr -p libs/ngx-tabs-lib/package.json"
+    "build:lib": "ng-packagr -p libs/ngx-form-controls/package.json"
   },
   "private": false,
   "dependencies": {

@@ -30,12 +30,6 @@
       }
     },
     {
-      "name": "ngx-tabs-lib",
-      "root": "libs/ngx-tabs-lib/src",
-      "test": "../../../test.js",
-      "appRoot": ""
-    },
-    {
       "name": "ngx-form-controls",
       "root": "libs/ngx-form-controls/src",
       "test": "../../../test.js",

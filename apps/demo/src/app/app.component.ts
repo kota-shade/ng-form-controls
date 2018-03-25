@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ɵTabsComponent as TabsComponent } from 'ngx-tabs-lib';
 import { Container } from '@angular/compiler/src/i18n/i18n_ast';
 
 import { FormGroup } from '@angular/forms';
@@ -27,7 +26,6 @@ export class AppComponent implements OnInit {
     checkbox: new NgxFormControlCheckbox(false, []),
     textarea: new NgxFormControlText('Ареа'),
   });
-  @ViewChild(TabsComponent) tabs: TabsComponent;
 
   constructor() {
     const control = <NgxFormControlSelect>this.form.get('select');
@@ -58,7 +56,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.tabs);
   }
 
   onSubmit() {
