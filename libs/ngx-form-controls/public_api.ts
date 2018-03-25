@@ -17,3 +17,5 @@ export { ValuePair as NpxValuePair } from './src/objects/object-form-select';
 export { ObjectFormSelect as NpxObjectFormSelect } from './src/objects/object-form-select';
 export { ValuePairMultiSelect as NpxValuePairMultiSelect } from './src/objects/object-form-multi-select';
 export { ObjectFormMultiSelect as NpxObjectFormMultiSelect } from './src/objects/object-form-multi-select';
+
+export { FillData as NpxSetControlData } from './src/utils/FillData';

@@ -1,5 +1,6 @@
+import { ObjectDataInterface } from './object-data-interface';
 
-export class BaseObject {
+export class BaseObject implements ObjectDataInterface {
   private _mode: string;
   private _key: string;
   private _value: string;
