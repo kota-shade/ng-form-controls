@@ -2,15 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Container } from '@angular/compiler/src/i18n/i18n_ast';
 
 import { FormGroup } from '@angular/forms';
-import { NgxFormControlTextComponent } from 'ngx-form-controls';
-
 import { NgxFormControlText, NgxFormControlSelect, NgxFormControlMultiSelect, NgxFormControlCheckbox } from 'ngx-form-controls';
-
-// import { NgxFormControlText } from '../../../../libs/ngx-form-controls/src/controls/ngx-form-control-text';
-// import {FormControlSelect} from '../../../../src/app/modules/form-controls/controls/form-control-select';
-// import {FormControlText} from '../../../../src/app/modules/form-controls/controls/form-control-text';
-// import {FormControlMultiSelect} from '../../../../src/app/modules/form-controls/controls/form-control-multi-select';
-// import {FormControlCheckbox} from '../../../../src/app/modules/form-controls/controls/form-control-checkbox';
+import { NpxControlDataSetter } from 'ngx-form-controls';
 
 @Component({
   selector: 'app-root',
@@ -28,34 +21,50 @@ export class AppComponent implements OnInit {
   });
 
   constructor() {
-    const control = <NgxFormControlSelect>this.form.get('select');
-    control.elementData.setData({
-      _options: [
-        { _value: '1', _label: '11'},
-        { _value: '2', _label: '22'},
-      ]
-    });
-    const control2 = <NgxFormControlMultiSelect>this.form.get('multiCheckbox');
-    control2.elementData.setData({
-      _options: [
-        { _value: '1', _label: '11'},
-        { _value: '2', _label: '22'},
-        { _value: '3', _label: '33'},
-        { _value: '4', _label: '44'},
-      ]
-    });
-    const control3 = <NgxFormControlSelect>this.form.get('radio');
-    control3.elementData.setData({
-      _options: [
-        { _value: '1', _label: '11'},
-        { _value: '2', _label: '22'},
-        { _value: '3', _label: '33'},
-        { _value: '4', _label: '44'},
-      ]
-    });
   }
 
   ngOnInit() {
+    const formData = {
+      _fields: {
+        text: {
+          _value: 'textValue'
+        },
+        select: {
+          _options: [
+            { _value: '1', _label: '11'},
+            { _value: '2', _label: '22'},
+          ],
+          _value: ['1']
+        },
+        multiCheckbox: {
+          _options: [
+            { _value: '1', _label: '11'},
+            { _value: '2', _label: '22'},
+            { _value: '3', _label: '33'},
+            { _value: '4', _label: '44'},
+          ],
+          _value: ['2', '3']
+        },
+        radio:  {
+          _options: [
+            { _value: '1', _label: '11'},
+            { _value: '2', _label: '22'},
+            { _value: '3', _label: '33'},
+            { _value: '4', _label: '44'},
+          ],
+          _value: '2'
+        },
+        checkbox: {
+          _value: true
+        },
+        textarea: {
+          _value: 'textArea test value22'
+        },
+      }
+    };
+
+    NpxControlDataSetter.setControlsData(this.form, formData);
+
   }
 
   onSubmit() {
