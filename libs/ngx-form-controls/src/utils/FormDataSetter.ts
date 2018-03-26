@@ -6,22 +6,22 @@ import {FormControlInterface} from '../controls/form-control-interface';
  * пробегает по переданным данным и рекурсивно заполняет объект полученными данными
  * и структуру контрольных элементов.
  */
-export class FillData {
+export class FormControlDataSetter {
   private static DISABLED_MODE = 'view';
 
   public static setControlsData(control: AbstractControl, data: object) {
     if (control instanceof FormGroup) {
-      FillData.setFormGroupData(control, data);
+      FormControlDataSetter.setFormGroupData(control, data);
     } else if (control instanceof FormArray) {
-      FillData.setFormArrayData(control, data);
+      FormControlDataSetter.setFormArrayData(control, data);
     } else if (control instanceof FormControl) {
-      FillData.setFormControlData(control, data);
+      FormControlDataSetter.setFormControlData(control, data);
     }
 
   }
 
   public static setFormGroupData(control: FormGroup, data) {
-    FillData.setControlMode(control, data);
+    FormControlDataSetter.setControlMode(control, data);
     if (data['_fields'] !== undefined) {
       const dataFields = data['_fields'];
       for (const key in dataFields) {
@@ -30,7 +30,7 @@ export class FillData {
         const fldCtrl = control.get(key);
         if (fldCtrl === null) { continue; }
 
-        FillData.setControlsData(fldCtrl, dataFields[key]);
+        FormControlDataSetter.setControlsData(fldCtrl, dataFields[key]);
       }
     }
   }
@@ -39,7 +39,7 @@ export class FillData {
    * Заполняет данными массив элементов формы FormArray
    */
   public static setFormArrayData(control: FormArray, data) {
-    FillData.setControlMode(control, data);
+    FormControlDataSetter.setControlMode(control, data);
 
     if (data['_items'] !== undefined) {
       let itemCtrl: AbstractControl;
@@ -54,7 +54,7 @@ export class FillData {
         } else {
           itemCtrl = control.controls[i];
         }
-        FillData.setControlsData(itemCtrl, itemData);
+        FormControlDataSetter.setControlsData(itemCtrl, itemData);
       }
 
       for (; i < control.length;) {
@@ -68,7 +68,7 @@ export class FillData {
    * заполняет данными FormControl объект
    */
   public static setFormControlData(control: FormControl, data): void {
-    FillData.setControlMode(control, data);
+    FormControlDataSetter.setControlMode(control, data);
 
     if (data['_default'] !== undefined && data['_default'] !== null) {
       control.setValue(data['_default']);
@@ -77,7 +77,7 @@ export class FillData {
       control.setValue(data['_value']);
     }
 
-    if (FillData.instanceOfFormControlInterface(control)) {
+    if (FormControlDataSetter.instanceOfFormControlInterface(control)) {
       control.elementData.setData(data);
       console.log('KOTA FormControlSelect SET DATA');
     }

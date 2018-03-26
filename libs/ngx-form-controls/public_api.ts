@@ -18,4 +18,4 @@ export { ObjectFormSelect as NpxObjectFormSelect } from './src/objects/object-fo
 export { ValuePairMultiSelect as NpxValuePairMultiSelect } from './src/objects/object-form-multi-select';
 export { ObjectFormMultiSelect as NpxObjectFormMultiSelect } from './src/objects/object-form-multi-select';
 
-export { FillData as NpxSetControlData } from './src/utils/FillData';
+export { FormControlDataSetter as NpxControlDataSetter } from './src/utils/FormDataSetter';
