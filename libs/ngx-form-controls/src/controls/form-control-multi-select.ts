@@ -8,7 +8,7 @@ export class FormControlMultiSelect extends FormControl implements FormControlIn
   elementData = new ObjectFormMultiSelect();
 
   constructor(
-    formState?: Array<any>,
+    formState?: any,
     validatorOrOpts?: ValidatorFn | ValidatorFn[] | AbstractControlOptions | null,
     asyncValidator?: AsyncValidatorFn | AsyncValidatorFn[] | null) {
 

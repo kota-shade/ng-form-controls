@@ -8,7 +8,7 @@ export class FormControlCheckbox extends FormControl implements FormControlInter
   elementData = new BaseObject();
 
   constructor(
-    formState?: boolean,
+    formState?: any,
     validatorOrOpts?: ValidatorFn | ValidatorFn[] | AbstractControlOptions | null,
     asyncValidator?: AsyncValidatorFn | AsyncValidatorFn[] | null) {
 

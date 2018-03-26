@@ -18,6 +18,10 @@ export class AppComponent implements OnInit {
     radio: new NgxFormControlSelect('1', []),
     checkbox: new NgxFormControlCheckbox(false, []),
     textarea: new NgxFormControlText('Ареа'),
+    grp: new FormGroup({
+      grpText: new NgxFormControlText(''),
+      grpSelect: new NgxFormControlSelect('', []),
+    })
   });
 
   constructor() {
@@ -60,6 +64,22 @@ export class AppComponent implements OnInit {
         textarea: {
           _value: 'textArea test value22'
         },
+        grp: {
+          _fields: {
+            grpText: {
+              _value: 'grpTextValue',
+              _mode: 'view'
+            },
+            grpSelect: {
+              _value: '3',
+              _options: [
+                { _value: '1', _label: '11'},
+                { _value: '2', _label: '22'},
+                { _value: '3', _label: '333'},
+              ],
+            }
+          }
+        }
       }
     };
 
