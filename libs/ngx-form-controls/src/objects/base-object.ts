@@ -3,7 +3,7 @@ import { ObjectDataInterface } from './object-data-interface';
 export class BaseObject implements ObjectDataInterface {
   private _mode: string;
   private _key: string;
-  private _value: string|Array<any>;
+  private _value: any;
   private _default: any;
 
   constructor(data: object = {}) {
@@ -37,11 +37,11 @@ export class BaseObject implements ObjectDataInterface {
     this._key = value;
   }
 
-  get value(): string | Array<any> {
+  get value(): any {
     return this._value;
   }
 
-  set value(value: string | Array<any>) {
+  set value(value: any) {
     this._value = value;
   }
 
