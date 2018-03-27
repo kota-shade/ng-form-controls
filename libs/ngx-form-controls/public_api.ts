@@ -7,11 +7,13 @@ export { MultiCheckboxComponent as NgxFormControlMultiCheckboxComponent } from '
 export { RadioComponent as NgxFormControlRadioComponent } from './src/components/radio/radio.component';
 export { SelectComponent as NgxFormControlSelectComponent } from './src/components/select/select.component';
 
+export { FormControlInterface as NgxFormControlInterface } from './src/controls/form-control-interface';
 export { FormControlText as NgxFormControlText } from './src/controls/form-control-text';
 export { FormControlCheckbox as NgxFormControlCheckbox } from './src/controls/form-control-checkbox';
 export { FormControlSelect as NgxFormControlSelect } from './src/controls/form-control-select';
 export { FormControlMultiSelect as NgxFormControlMultiSelect } from './src/controls/form-control-multi-select';
 
+export {ObjectDataInterface} from './src/objects/object-data-interface';
 export { BaseObject as NpxBaseObject } from './src/objects/base-object';
 export { ValuePair as NpxValuePair } from './src/objects/object-form-select';
 export { ObjectFormSelect as NpxObjectFormSelect } from './src/objects/object-form-select';

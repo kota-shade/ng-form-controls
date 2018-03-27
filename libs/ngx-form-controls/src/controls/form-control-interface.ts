@@ -1,5 +1,5 @@
-import {BaseObject} from '../objects/base-object';
+import {ObjectDataInterface} from '../objects/object-data-interface';
 
 export interface FormControlInterface {
-  elementData: BaseObject;
+  elementData: ObjectDataInterface;
 }
