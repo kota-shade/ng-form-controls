@@ -40,7 +40,6 @@ export class ErrorMessageComponent implements OnInit {
 
   private getMessage(type: string, params: any) {
     const ret = ErrorMessageComponent.errorMessages[type](params);
-    console.log('KOTA err getMessage = ', ret, type, params);
     return ret;
   }
 }

@@ -5,9 +5,7 @@ import {AsyncValidatorFn, ValidatorFn} from '@angular/forms/src/directives/valid
 import {FormControlInterface} from './form-control-interface';
 
 export class FormControlText extends FormControl implements FormControlInterface {
-  static cnt = 1;
   private _elementData = new BaseObject();
-  mycnt: number;
 
   constructor(
     formState?: any,
@@ -15,7 +13,6 @@ export class FormControlText extends FormControl implements FormControlInterface
     asyncValidator?: AsyncValidatorFn | AsyncValidatorFn[] | null) {
 
     super(formState, validatorOrOpts, asyncValidator);
-    this.mycnt = FormControlText.cnt++;
   }
 
 
