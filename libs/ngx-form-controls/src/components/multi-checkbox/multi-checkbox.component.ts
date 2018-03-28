@@ -19,7 +19,6 @@ export class MultiCheckboxComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('KOTA elementData');
   }
 
   realMode() {
@@ -39,7 +38,7 @@ export class MultiCheckboxComponent implements OnInit {
     const currentData = this.formElement.value;
     const position: number = currentData.indexOf(event.target.value);
     if (event.target.checked === false) {
-      if (~position) {
+      if (position >= 0) {
         currentData.splice(position, 1);
       }
     } else {

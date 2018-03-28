@@ -76,10 +76,11 @@ export class FormControlDataSetter {
     if (data['_value'] !== undefined && data['_value'] !== null) {
       control.setValue(data['_value']);
     }
-
+    if (data['_error'] !== undefined && data['_error'] !== null) {
+      control.setErrors({error: { message: data['_error']}});
+    }
     if (FormControlDataSetter.instanceOfFormControlInterface(control)) {
       control.elementData.setData(data);
-      // console.log('KOTA setFormControlData SET DATA', data);
     }
   }
 
