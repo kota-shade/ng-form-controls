@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
           { _value: '1', _label: '11'},
           { _value: '2', _label: '22'},
         ],
-        _value: ['1']
+        _value: '2'
       },
       multiCheckbox: {
         _options: [
