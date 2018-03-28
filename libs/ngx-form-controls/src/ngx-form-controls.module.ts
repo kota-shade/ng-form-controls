@@ -8,6 +8,7 @@ import { RadioComponent } from './components/radio/radio.component';
 import { TextareaComponent } from './components/textarea/textarea.component';
 import { MultiCheckboxComponent } from './components/multi-checkbox/multi-checkbox.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
+import { ErrorMessageComponent } from './components/error-message/error-message.component';
 
 @NgModule({
   imports: [
@@ -22,6 +23,7 @@ import { CheckboxComponent } from './components/checkbox/checkbox.component';
     TextareaComponent,
     MultiCheckboxComponent,
     CheckboxComponent,
+    ErrorMessageComponent,
   ],
   exports: [
     TextComponent,
@@ -30,6 +32,7 @@ import { CheckboxComponent } from './components/checkbox/checkbox.component';
     TextareaComponent,
     MultiCheckboxComponent,
     CheckboxComponent,
+    ErrorMessageComponent,
   ]
 })
 export class NgxFormControlsModule { }

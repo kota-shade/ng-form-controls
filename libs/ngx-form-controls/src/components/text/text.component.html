@@ -4,7 +4,4 @@
        [readonly]="realMode() === 'view'"
        id="{{id}}"
 >
-<!--[formControl]="formElement"-->
-<!--id="{{id}}"-->
-<!--[class]="realMode() === 'view'? 'form-control-plaintext'+elementClass : 'form-control'+elementClass"-->
-<!--[readonly]="realMode() === 'view'"-->
+<ngx-form-control-error-message [formElement]="formElement"></ngx-form-control-error-message>

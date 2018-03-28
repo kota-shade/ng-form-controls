@@ -2,14 +2,14 @@
 <form
   [formGroup]="form" (ngSubmit)="onSubmit()" >
   <ngx-form-control-text [formElement]="form.get('text')"></ngx-form-control-text>
-  <ngx-form-control-select [formElement]="form.get('select')"></ngx-form-control-select>
-  <ngx-form-control-multi-checkbox [formElement]="form.get('multiCheckbox')"></ngx-form-control-multi-checkbox>
-  <ngx-form-control-radio [formElement]="form.get('radio')"></ngx-form-control-radio>
-  <ngx-form-control-checkbox [formElement]="form.get('checkbox')" [label]="'Чекбокс'"></ngx-form-control-checkbox>
-  <ngx-form-control-textarea [formElement]="form.get('textarea')"></ngx-form-control-textarea>
-  <fieldset>
-    <ngx-form-control-text [formElement]="form.controls['grp'].controls['grpText']"></ngx-form-control-text>
-    <ngx-form-control-select [formElement]="form.controls['grp'].controls['grpSelect']"></ngx-form-control-select>
-  </fieldset>
+  <!--<ngx-form-control-select [formElement]="form.get('select')"></ngx-form-control-select>-->
+  <!--<ngx-form-control-multi-checkbox [formElement]="form.get('multiCheckbox')"></ngx-form-control-multi-checkbox>-->
+  <!--<ngx-form-control-radio [formElement]="form.get('radio')"></ngx-form-control-radio>-->
+  <!--<ngx-form-control-checkbox [formElement]="form.get('checkbox')" [label]="'Чекбокс'"></ngx-form-control-checkbox>-->
+  <!--<ngx-form-control-textarea [formElement]="form.get('textarea')"></ngx-form-control-textarea>-->
+  <!--<fieldset>-->
+    <!--<ngx-form-control-text [formElement]="form.controls['grp'].controls['grpText']"></ngx-form-control-text>-->
+    <!--<ngx-form-control-select [formElement]="form.controls['grp'].controls['grpSelect']"></ngx-form-control-select>-->
+  <!--</fieldset>-->
   <input type="submit" name="OK">
 </form>

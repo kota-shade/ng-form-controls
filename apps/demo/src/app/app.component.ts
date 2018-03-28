@@ -12,16 +12,16 @@ import { NpxControlDataSetter } from 'ngx-form-controls';
 })
 export class AppComponent implements OnInit {
   form = new FormGroup({
-    text: new NgxFormControlText('22'),
-    select: new NgxFormControlSelect('1', []),
-    multiCheckbox: new NgxFormControlMultiSelect(['2'], []),
-    radio: new NgxFormControlSelect('1', []),
-    checkbox: new NgxFormControlCheckbox(false, []),
-    textarea: new NgxFormControlText('Ареа'),
-    grp: new FormGroup({
-      grpText: new NgxFormControlText(''),
-      grpSelect: new NgxFormControlSelect('', []),
-    })
+    text: new NgxFormControlText('22', []),
+    // select: new NgxFormControlSelect('1', []),
+    // multiCheckbox: new NgxFormControlMultiSelect(['2'], []),
+    // radio: new NgxFormControlSelect('1', []),
+    // checkbox: new NgxFormControlCheckbox(false, []),
+    // textarea: new NgxFormControlText('Ареа'),
+    // grp: new FormGroup({
+    //   grpText: new NgxFormControlText(''),
+    //   grpSelect: new NgxFormControlSelect('', []),
+    // })
   });
 
   constructor() {
@@ -31,7 +31,8 @@ export class AppComponent implements OnInit {
     const formData = {
       _fields: {
         text: {
-          _value: 'textValue'
+          _value: 'textValue',
+          _error: 'TestError',
         },
         select: {
           _options: [
@@ -85,6 +86,8 @@ export class AppComponent implements OnInit {
 
     NpxControlDataSetter.setControlsData(this.form, formData);
 
+    this.form.get('text').setErrors({error: { message: 'ZZZZZ'}});
+    console.log('KOTA 222 status = ', this.form.get('text').status, (<NgxFormControlText>this.form.get('text')).mycnt);
   }
 
   onSubmit() {

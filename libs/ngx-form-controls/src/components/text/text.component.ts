@@ -17,9 +17,11 @@ export class TextComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log('KOTA status = ', this.formElement.status);
   }
 
   realMode() {
+    console.log('KOTA status = ', this.formElement.status, this.formElement.mycnt);
     if (this.mode === null) {
       return this.formElement.elementData.mode;
     }
