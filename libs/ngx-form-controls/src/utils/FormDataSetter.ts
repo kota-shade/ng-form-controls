@@ -79,6 +79,9 @@ export class FormControlDataSetter {
     if (data['_error'] !== undefined && data['_error'] !== null) {
       control.setErrors({error: { message: data['_error']}});
     }
+    if (data['_errors'] !== undefined && data['_errors'].length > 0) {
+      control.setErrors({error: { message: data['_errors'][0]}});
+    }
     if (FormControlDataSetter.instanceOfFormControlInterface(control)) {
       control.elementData.setData(data);
     }
