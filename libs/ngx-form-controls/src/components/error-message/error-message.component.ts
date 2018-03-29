@@ -1,6 +1,24 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {FormControl, AbstractControl} from '@angular/forms';
 
+export function ngxErrorMessageError(params) {
+  return params.message;
+}
+
+export function ngxErrorMessageRequired(params) {
+  return 'This field is required';
+}
+
+export function ngxErrorMessageMinlength(params) {
+  return 'The min number of characters is ' + params.requiredLength;
+}
+export function ngxErrorMessageMaxlength(params) {
+  return 'The max allowed number of characters is ' + params.requiredLength;
+}
+export function ngxErrorMessagePattern(params) {
+  return 'The required pattern is: ' + params.requiredPattern;
+}
+
 @Component({
   selector: 'ngx-form-control-error-message',
   templateUrl: './error-message.component.html',
@@ -8,19 +26,22 @@ import {FormControl, AbstractControl} from '@angular/forms';
 })
 export class ErrorMessageComponent implements OnInit {
   private static errorMessages = {
-    'error': (params) => params.message,
-    // 'required': () => 'This field is required',
-    // 'minlength': (params) => 'The min number of characters is ' + params.requiredLength,
-    // 'maxlength': (params) => 'The max allowed number of characters is ' + params.requiredLength,
-    // 'pattern': (params) => 'The required pattern is: ' + params.requiredPattern,
-    // 'years': (params) => params.message,
-    // 'countryCity': (params) => params.message,
-    // 'uniqueName': (params) => params.message,
-    // 'telephoneNumbers': (params) => params.message,
-    // 'telephoneNumber': (params) => params.message
+    'error': ngxErrorMessageError,
+    'required': ngxErrorMessageRequired,
+    'minlength': ngxErrorMessageMinlength,
+    'maxlength': ngxErrorMessageMaxlength,
+    'pattern': ngxErrorMessagePattern
   };
 
   @Input()formElement: AbstractControl = new FormControl('');
+
+  static setErrorMessageFunctor(type: string, functor) {
+    ErrorMessageComponent.errorMessages['type'] = functor;
+  }
+
+  static getErrorMessageFunctor(type: string, functor) {
+    return ErrorMessageComponent.errorMessages['type'];
+  }
 
   constructor() { }
 
