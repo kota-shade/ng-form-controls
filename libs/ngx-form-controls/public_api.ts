@@ -7,6 +7,7 @@ export { MultiCheckboxComponent as NgxFormControlMultiCheckboxComponent } from '
 export { RadioComponent as NgxFormControlRadioComponent } from './src/components/radio/radio.component';
 export { SelectComponent as NgxFormControlSelectComponent } from './src/components/select/select.component';
 export { ErrorMessageComponent as NgxFormControlErrorMessageComponent} from './src/components/error-message/error-message.component';
+export { CheckboxIntComponent as NgxFormControlCheckboxIntComponent } from './src/components/checkbox-int/checkbox-int.component';
 
 export { FormControlInterface as NgxFormControlInterface } from './src/controls/form-control-interface';
 export { FormControlText as NgxFormControlText } from './src/controls/form-control-text';

@@ -9,6 +9,7 @@ import { TextareaComponent } from './components/textarea/textarea.component';
 import { MultiCheckboxComponent } from './components/multi-checkbox/multi-checkbox.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { ErrorMessageComponent } from './components/error-message/error-message.component';
+import { CheckboxIntComponent } from './components/checkbox-int/checkbox-int.component';
 
 @NgModule({
   imports: [
@@ -24,6 +25,7 @@ import { ErrorMessageComponent } from './components/error-message/error-message.
     MultiCheckboxComponent,
     CheckboxComponent,
     ErrorMessageComponent,
+    CheckboxIntComponent,
   ],
   exports: [
     TextComponent,
@@ -33,6 +35,7 @@ import { ErrorMessageComponent } from './components/error-message/error-message.
     MultiCheckboxComponent,
     CheckboxComponent,
     ErrorMessageComponent,
+    CheckboxIntComponent,
   ]
 })
 export class NgxFormControlsModule { }

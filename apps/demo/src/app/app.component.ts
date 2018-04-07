@@ -48,6 +48,9 @@ export class AppComponent implements OnInit {
       textarea: {
         _value: 'textArea test value22'
       },
+      checkbox2: {
+        _value: 0
+      },
       grp: {
         _fields: {
           grpText: {
@@ -73,6 +76,7 @@ export class AppComponent implements OnInit {
     multiCheckbox: new NgxFormControlMultiSelect(['2'], []),
     radio: new NgxFormControlSelect('1', []),
     checkbox: new NgxFormControlCheckbox(false, []),
+    checkbox2: new NgxFormControlCheckbox(0, []),
     textarea: new NgxFormControlText('Ареа'),
     grp: new FormGroup({
       grpText: new NgxFormControlText(''),
