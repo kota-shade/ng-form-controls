@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {FormControlSelect} from '../../controls/form-control-select';
 import { ValueMapperInterface } from './value-mapper-interface';
 
-class DefaultValueMapper implements ValueMapperInterface {
+export class DefaultValueMapper implements ValueMapperInterface {
     optionToValue(value: string): any {
         return (value === '') ?  null : value;
     }

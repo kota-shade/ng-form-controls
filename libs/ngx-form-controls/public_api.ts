@@ -25,3 +25,4 @@ export { ValuePairMultiSelect as NpxValuePairMultiSelect } from './src/objects/o
 export { ObjectFormMultiSelect as NpxObjectFormMultiSelect } from './src/objects/object-form-multi-select';
 
 export { FormControlDataSetter as NpxControlDataSetter } from './src/utils/FormDataSetter';
+export { DefaultValueMapper as NgxFormControlDefaultValueMapper } from './src/components/select-void/select-void.component';
