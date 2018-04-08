@@ -9,7 +9,7 @@ import { FormControlSelect } from '../../controls/form-control-select';
 export class RadioComponent implements OnInit {
   @Input() mode: string|null = null;
   @Input() formElement = new FormControlSelect('', {});
-  @Input() id = '';
+  @Input() id = 'empty';
   @Input() elementClass = 'custom-control-input';
   @Input() wrapRadioClass = 'custom-control custom-radio';
   @Input() radioLabelClass = 'custom-control-label';

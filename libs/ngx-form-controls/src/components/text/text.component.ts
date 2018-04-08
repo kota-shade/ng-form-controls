@@ -12,7 +12,7 @@ export class TextComponent implements OnInit {
   @Input() mode: string|null = null;
   @Input() formElement = new NgxFormControlText('', {});
   @Input() elementClass = '';
-  @Input() id = '';
+  @Input() id = 'empty';
 
   constructor() { }
 

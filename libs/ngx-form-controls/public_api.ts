@@ -8,6 +8,8 @@ export { RadioComponent as NgxFormControlRadioComponent } from './src/components
 export { SelectComponent as NgxFormControlSelectComponent } from './src/components/select/select.component';
 export { ErrorMessageComponent as NgxFormControlErrorMessageComponent} from './src/components/error-message/error-message.component';
 export { CheckboxIntComponent as NgxFormControlCheckboxIntComponent } from './src/components/checkbox-int/checkbox-int.component';
+export { SelectVoidComponent as NgxFormControlSelectVoidComponent } from './src/components/select-void/select-void.component';
+export { ValueMapperInterface as NgxFormControlValueMapperInterface } from './src/components/select-void/value-mapper-interface';
 
 export { FormControlInterface as NgxFormControlInterface } from './src/controls/form-control-interface';
 export { FormControlText as NgxFormControlText } from './src/controls/form-control-text';

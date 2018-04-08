@@ -70,10 +70,10 @@ export class FormControlDataSetter {
   public static setFormControlData(control: FormControl, data): void {
     FormControlDataSetter.setControlMode(control, data);
 
-    if (data['_default'] !== undefined && data['_default'] !== null) {
+    if (data['_default'] !== undefined) {
       control.setValue(data['_default']);
     }
-    if (data['_value'] !== undefined && data['_value'] !== null) {
+    if (data['_value'] !== undefined) {
       control.setValue(data['_value']);
     }
     if (data['_error'] !== undefined && data['_error'] !== null) {

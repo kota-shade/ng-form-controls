@@ -10,6 +10,7 @@ import { MultiCheckboxComponent } from './components/multi-checkbox/multi-checkb
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { ErrorMessageComponent } from './components/error-message/error-message.component';
 import { CheckboxIntComponent } from './components/checkbox-int/checkbox-int.component';
+import { SelectVoidComponent } from './components/select-void/select-void.component';
 
 @NgModule({
   imports: [
@@ -26,6 +27,7 @@ import { CheckboxIntComponent } from './components/checkbox-int/checkbox-int.com
     CheckboxComponent,
     ErrorMessageComponent,
     CheckboxIntComponent,
+    SelectVoidComponent,
   ],
   exports: [
     TextComponent,
@@ -36,6 +38,7 @@ import { CheckboxIntComponent } from './components/checkbox-int/checkbox-int.com
     CheckboxComponent,
     ErrorMessageComponent,
     CheckboxIntComponent,
+    SelectVoidComponent,
   ]
 })
 export class NgxFormControlsModule { }

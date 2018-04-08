@@ -14,7 +14,7 @@ export class CheckboxIntComponent implements OnInit {
   @Input() formElement = new FormControlCheckbox(false, {});
   @Input() elementClass = 'custom-control-input';
   @Input() labelClass = 'custom-control-label';
-  @Input() id = 'change-me';
+  @Input() id = 'empty';
   @Input() label = '';
   // myElement = new FormControlCheckbox();
 

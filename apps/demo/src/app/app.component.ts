@@ -66,13 +66,21 @@ export class AppComponent implements OnInit {
             ],
           }
         }
-      }
+      },
+      selectVoid: {
+          _options: [
+              { _value: '1', _label: '11'},
+              { _value: '2', _label: '22'},
+              { _value: '', _label: 'Выберите'},
+          ],
+          _value: null
+      },
     }
   };
 
   form = new FormGroup({
     text: new NgxFormControlText('22', []),
-    select: new NgxFormControlSelect('1', []),
+    select: new NgxFormControlSelect('', []),
     multiCheckbox: new NgxFormControlMultiSelect(['2'], []),
     radio: new NgxFormControlSelect('1', []),
     checkbox: new NgxFormControlCheckbox(false, []),
@@ -81,7 +89,8 @@ export class AppComponent implements OnInit {
     grp: new FormGroup({
       grpText: new NgxFormControlText(''),
       grpSelect: new NgxFormControlSelect('', []),
-    })
+    }),
+    selectVoid: new NgxFormControlSelect(null, []),
   });
 
   constructor() {

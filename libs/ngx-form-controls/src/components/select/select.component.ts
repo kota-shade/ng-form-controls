@@ -12,7 +12,7 @@ export class SelectComponent implements OnInit {
   @Input() mode: string|null = null;
   @Input() formElement = new FormControlSelect('', {});
   @Input() elementClass = 'form-control';
-  @Input() id = '';
+  @Input() id = 'empty';
 
   constructor() { }
 
@@ -27,9 +27,15 @@ export class SelectComponent implements OnInit {
   }
   getValue() {
     for (const item of this.formElement.elementData.options) {
-      if (item.key.toString() === this.formElement.value.toString()) {
+      if (this.isOptionSelected(item.key)) {
         return this.formElement.value;
       }
     }
+  }
+
+  isOptionSelected(key) {
+    const lval = (key) ? key.toString() : '';
+    const rval = this.formElement.value ? this.formElement.value.toString() : '';
+    return (lval === rval);
   }
 }

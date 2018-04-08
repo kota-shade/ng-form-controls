@@ -11,7 +11,7 @@ export class MultiCheckboxComponent implements OnInit {
   @Input() mode: string|null = null;
   @Input() formElement = new FormControlMultiSelect([], {});
   @Input() elementClass = 'form-control';
-  @Input() id = '';
+  @Input() id = 'empty';
   @Input() wrapCheckboxClass = '';
   @Input() checkboxClass = '';
   @Input() checkboxLabelClass = '';
