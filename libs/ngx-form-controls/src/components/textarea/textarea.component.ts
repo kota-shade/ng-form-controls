@@ -10,7 +10,7 @@ export class TextareaComponent implements OnInit {
   @Input() mode: string|null = null;
   @Input() formElement = new FormControlText('', {});
   @Input() elementClass = '';
-  @Input() id = '';
+  @Input() id = 'empty';
 
   constructor() { }
 

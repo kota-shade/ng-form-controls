@@ -9,6 +9,8 @@ import { TextareaComponent } from './components/textarea/textarea.component';
 import { MultiCheckboxComponent } from './components/multi-checkbox/multi-checkbox.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { ErrorMessageComponent } from './components/error-message/error-message.component';
+import { CheckboxIntComponent } from './components/checkbox-int/checkbox-int.component';
+import { SelectVoidComponent } from './components/select-void/select-void.component';
 
 @NgModule({
   imports: [
@@ -24,6 +26,8 @@ import { ErrorMessageComponent } from './components/error-message/error-message.
     MultiCheckboxComponent,
     CheckboxComponent,
     ErrorMessageComponent,
+    CheckboxIntComponent,
+    SelectVoidComponent,
   ],
   exports: [
     TextComponent,
@@ -33,6 +37,8 @@ import { ErrorMessageComponent } from './components/error-message/error-message.
     MultiCheckboxComponent,
     CheckboxComponent,
     ErrorMessageComponent,
+    CheckboxIntComponent,
+    SelectVoidComponent,
   ]
 })
 export class NgxFormControlsModule { }
