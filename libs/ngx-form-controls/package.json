@@ -1,13 +1,13 @@
 {
   "$schema": "../../node_modules/ng-packagr/package.schema.json",
   "name": "ngx-form-controls",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "license": "MIT",
   "private": false,
   "peerDependencies": {
-    "@angular/common": "^5.2.0",
-    "@angular/core": "^5.2.0",
-    "@angular/forms": "^5.2.0"
+    "@angular/common": "^5.2.0 || >=6.0.3",
+    "@angular/core": "^5.2.0 || >=6.0.3",
+    "@angular/forms": "^5.2.0 || >=6.0.3"
   },
   "ngPackage": {
     "lib": {
