@@ -118,61 +118,6 @@
         }
       }
     },
-    "ngx-form-controls": {
-      "root": "",
-      "sourceRoot": "libs/ngx-form-controls/src",
-      "projectType": "library",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist/",
-            "index": "libs/ngx-form-controls/src/index.html",
-            "main": "libs/ngx-form-controls/src/main.ts",
-            "tsConfig": "libs/ngx-form-controls/src/tsconfig.app.json",
-            "assets": [],
-            "styles": [],
-            "scripts": []
-          },
-          "configurations": {}
-        },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "ngx-form-controls:build"
-          },
-          "configurations": {}
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "ngx-form-controls:build"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "libs/ngx-form-controls/src/../../../test.js",
-            "karmaConfig": "./karma.conf.js",
-            "scripts": [],
-            "styles": [],
-            "assets": []
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    },
     "ngx-form-controls-e2e": {
       "root": "",
       "sourceRoot": "",
@@ -198,104 +143,38 @@
         }
       }
     },
-    "old": {
-      "root": "",
-      "sourceRoot": "src",
-      "projectType": "application",
+    "ngx-form-controls": {
+      "root": "projects/ngx-form-controls",
+      "sourceRoot": "projects/ngx-form-controls/src",
+      "projectType": "library",
+      "prefix": "lib",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "outputPath": "dist",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "tsConfig": "src/tsconfig.app.json",
-            "polyfills": "src/polyfills.ts",
-            "assets": [
-              "src/assets",
-              "src/favicon.ico"
-            ],
-            "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
+            "tsConfig": "projects/ngx-form-controls/tsconfig.lib.json",
+            "project": "projects/ngx-form-controls/ng-package.json"
           },
           "configurations": {
-            "prod": {
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ]
+            "production": {
+              "project": "projects/ngx-form-controls/ng-package.prod.json"
             }
-          }
-        },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "old:build"
-          },
-          "configurations": {
-            "prod": {
-              "browserTarget": "old:build:prod"
-            }
-          }
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "old:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
-            "karmaConfig": "./karma.conf.js",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.spec.json",
-            "scripts": [],
-            "styles": [
-              "src/styles.css"
-            ],
-            "assets": [
-              "src/assets",
-              "src/favicon.ico"
-            ]
+            "main": "projects/ngx-form-controls/src/test.ts",
+            "tsConfig": "projects/ngx-form-controls/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-form-controls/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    },
-    "old-e2e": {
-      "root": "",
-      "sourceRoot": "",
-      "projectType": "application",
-      "architect": {
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "old:serve"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "e2e/tsconfig.e2e.json"
+              "projects/ngx-form-controls/tsconfig.lib.json",
+              "projects/ngx-form-controls/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

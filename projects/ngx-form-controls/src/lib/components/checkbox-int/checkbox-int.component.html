@@ -1,0 +1,7 @@
+<input type="checkbox"
+       class="{{elementClass}}"
+       id="{{id}}"
+       [checked]="formElement.value"
+       (change)="changeValue($event.target.checked)"
+>
+<label for="{{id}}" class="{{labelClass}}">{{label}}</label>

@@ -17,7 +17,12 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "ngx-form-controls": ["libs/ngx-form-controls"]
+      "ngx-form-controls": [
+        "dist/ngx-form-controls"
+      ],
+      "ngx-form-controls/*": [
+        "dist/ngx-form-controls/*"
+      ]
     }
   }
 }

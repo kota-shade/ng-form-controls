@@ -19,11 +19,11 @@
   <ngx-form-control-textarea [formElement]="form.get('textarea')"></ngx-form-control-textarea>
   <ngx-form-control-error-message [formElement]="form.get('textarea')"></ngx-form-control-error-message>
   <fieldset>
-    <ngx-form-control-text [formElement]="form.controls['grp'].controls['grpText']"></ngx-form-control-text>
-    <ngx-form-control-error-message [formElement]="form.controls['grp'].controls['grpText']"></ngx-form-control-error-message>
+    <ngx-form-control-text [formElement]="form.get('grp').get('grpText')"></ngx-form-control-text>
+    <ngx-form-control-error-message [formElement]="form.get('grp').get('grpText')"></ngx-form-control-error-message>
 
-    <ngx-form-control-select [formElement]="form.controls['grp'].controls['grpSelect']"></ngx-form-control-select>
-    <ngx-form-control-error-message [formElement]="form.controls['grp'].controls['grpSelect']"></ngx-form-control-error-message>
+    <ngx-form-control-select [formElement]="form.get('grp').get('grpSelect')"></ngx-form-control-select>
+    <ngx-form-control-error-message [formElement]="form.get('grp').get('grpSelect')"></ngx-form-control-error-message>
   </fieldset>
   <br>
   <ngx-form-control-checkbox-int [formElement]="form.get('checkbox2')" [label]="'Чекбокс2'"></ngx-form-control-checkbox-int>

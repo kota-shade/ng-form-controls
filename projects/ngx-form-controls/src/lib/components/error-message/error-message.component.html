@@ -1,0 +1,3 @@
+<div *ngIf="shouldShowErrors()" class="form-control-errors">
+  <span *ngFor="let error of listOfErrors()" class="form-control-error-item">{{error}}</span>
+</div>
